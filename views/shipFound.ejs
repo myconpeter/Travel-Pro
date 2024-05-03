@@ -6,7 +6,95 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<style>
+    table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
 
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+</style>
 
 </head>
 <body>
@@ -14,7 +102,7 @@
   <div style="display: flex; justify-content: center;"> 
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
       <h1 class="mb-4 text-dark" style="color: #13357b;">Valid Ticket ID</h1>
-     
+     <p>All items are displayed below</p>
   
          
         
@@ -25,8 +113,8 @@
 
   
     <div style="display: flex; justify-content: center; align-items: center; height: 75vh; margin-top: 100px;">
-        <div style="background-color: white; height: 500px; width: 68vw;">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0; height: 15%; width: 68vw; background-color: #13357b;" href="" class="" >
+        <div style="background-color: white; height: 500px; width: 75vw;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0; height: 15%; width: 75vw; background-color: #13357b;" href="" class="" >
                 <h3 style="color: white; margin-left: 10px; font-size: 30px;" class="m-0"><i class="fa fa-map-marker-alt me-3 " style="margin-right: 10px;"></i>Travel-Pro Logistics</h3>
                 <h5  style="color: white; margin-right: 10px; font-size: 30px">BOARDING PASS</h5>
             </div>
@@ -151,5 +239,59 @@
 
         </div>
       </div>
+
+      <table style="margin-top: 20px;">
+        <caption>Items Summary</caption>
+        <thead>
+          <tr>
+            <th scope="col">items</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Account"><%= item.item1 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item2 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item3 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item4 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item5 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item6 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item7 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item8 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item9 %></td>
+            
+          </tr>
+          <tr>
+            <td data-label="Account"><%= item.item10 %></td>
+            
+          </tr>
+          
+          
+        </tbody>
+      </table>
 </body>
 </html>
