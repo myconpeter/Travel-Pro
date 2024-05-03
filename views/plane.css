@@ -1,0 +1,10 @@
+.centered-div {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* adjust the height as needed */
+    width: 100vw; /* adjust the width as needed */
+    margin: 0 auto; /* center the div horizontally */
+    padding: 20px;
+  }
