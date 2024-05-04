@@ -140,6 +140,14 @@ body {
                                 <h3><%= item.departure %> <span><%= item.time %></span></h3>
                             </div>
                         </div>
+
+                        <div>
+                            <p style="color: gray; font-size: 13px;">CURRENT LOCATION</p>
+                            <h3><%= item.currentLocation %></h3>
+
+                        </div>
+
+                        
     
                         <div style="display: flex; justify-content: space-between;">
                             <div>
@@ -168,7 +176,7 @@ body {
                 </div>
                
                 <div style=" display: inline-block; position: relative; transform: rotate(270deg);">
-                    <img style="width: 200px; height: 100px;" src="img/barcode.png" alt="">
+                    <img style="width: 200px; height: 70px; padding: 10px;" src="img/barcode.png" alt="">
                     <p style="text-align: center; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);"><span><%= item.gate %></span><span><%= item.orderNumber %></span></p>
                   </div>
                 
@@ -176,8 +184,8 @@ body {
 
 
                 <!-- left details -->
-                <div style="background-color: lightgray; width: 35%; height: 500px;">
-                    <div style=" display: flex; margin-left: 50px; align-items: center;">
+                <div style="background-color: lightgray; width: 45%; height: 500px;">
+                    <div style=" display: flex; margin-left: 10px; align-items: center;">
                         <div>
                             <div>
                                 <p style="color: gray; font-size: 13px;">ITEM NAME</p>
@@ -210,12 +218,16 @@ body {
                                 <p style="color: gray; font-size: 13px;">FROM / TO</p>
                                 <h3><%= item.from %> &nbsp; <span><i class="fas fa-plane"></i></span><span> &nbsp;<%= item.to %></span></h3>
                             </div>
+                            <div>
+                                <p style="color: gray; font-size: 13px;">CURRENT LOCATION</p>
+                                <h3><%= item.currentLocation %></h3>
+                            </div>
         
                         </div>
     
                         <div style="margin-top: 300px; display: inline-block; position: relative; transform: rotate(270deg);">
-                            <img style="width: 100px; height: 100px;" src="img/barcode.png" alt="">
-                            <p style="text-align: center; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);"><span><%= item.gate %></span><span><%= item.orderNumber %></span></p>
+                            <img style="width: 100px; height: 40px;" src="img/barcode.png" alt="">
+                            <p style="font-size: 10px; text-align: center; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);"><span><%= item.gate %></span><span><%= item.orderNumber %></span></p>
                         </div>
                         
                     
