@@ -355,6 +355,9 @@ body > h1 {
             </div>
         </div>
       </div>
+
+
+      <!-- PACKAGE -->
 <div style="margin-top: 150px;">
     <h1 style="text-align: center;">Your Package's Path to You</h1>
 <br/>
@@ -375,7 +378,7 @@ body > h1 {
   <div class="outer-circle">
     <div class="inner-circle">
       <div class="inner-circle-content">
-        <span><%= item.to%></span>
+        <span><%= item.currentLocation%></span>
         <svg width="35" height="35" viewBox="0 0 24 24">
           <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
         </svg>
@@ -386,7 +389,7 @@ body > h1 {
   <div class="outer-circle">
     <div class="inner-circle">
       <div class="inner-circle-content">
-        <span><%= item.currentLocation%></span>
+        <span><%= item.to%></span>
         <svg width="35" height="35" viewBox="0 0 24 24">
           <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"></path>
         </svg>
@@ -417,48 +420,59 @@ body > h1 {
         </thead>
         <tbody>
           <tr>
-            <td data-label="Account"><%= item.item1 %></td>
+            <td style="text-align: center;"><%= item.item1 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item2 %></td>
+            <td style="text-align: center;"><%= item.item2 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item3 %></td>
+            <td style="text-align: center;"><%= item.item3 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item4 %></td>
+            <td style="text-align: center;"> <%= item.item4 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item5 %></td>
+            <td style="text-align: center;"><%= item.item5 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item6 %></td>
+            <td style="text-align: center;"><%= item.item6 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item7 %></td>
+            <td style="text-align: center;"><%= item.item7 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item8 %></td>
+            <td style="text-align: center;"><%= item.item8 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item9 %></td>
+            <td style="text-align: center;"><%= item.item9 %></td>
             
           </tr>
           <tr>
-            <td data-label="Account"><%= item.item10 %></td>
+            <td style="text-align: center;"> <%= item.item10 %></td>
             
           </tr>
           
           
         </tbody>
       </table>
+
+
+      <div style="margin-top: 200px; ">
+        <div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
+            <div style="background-color: #13357b ; height: 70vh;  width: 70vw; display: flex; justify-content: center; align-items: center;">
+                <h1 style="color: white; margin-left: 10px; font-size: 30px; margin-bottom: 20px;" class="m-0"><i class="fa fa-map-marker-alt me-3 " style="margin-right: 10px;"></i>Travel-Pro</h1>
+                
+            </div>
+
+        </div>
+      </div>
 </body>
 </html>
