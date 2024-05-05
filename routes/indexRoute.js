@@ -39,6 +39,13 @@ router.get('/shipFound', (req, res)=>{
     res.render('shipFound')
 });
 
+router.get('/searchShip', (req,res)=>{
+    res.redirect('/shipment')
+})
+
+router.get('/searchPlane', (req,res)=>{
+    res.redirect('/')
+})
 
 
 
