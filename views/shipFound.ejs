@@ -126,7 +126,7 @@ body > h1 {
   width: 150px;
   height: 150px;
   box-sizing: content-box;
-  border: 50px solid #f6671f;
+  border: 50px solid #13357b;
   transform: rotate(45deg);
   border-radius: 50%;
 }
@@ -157,8 +157,8 @@ body > h1 {
 }
 
 .outer-circle svg path {
-  stroke: #f6671f;
-  fill: #f6671f;
+  stroke: #13357b;
+  fill: #13357b;
 }
 
 .outer-circle:not(:first-child) {
@@ -180,7 +180,7 @@ body > h1 {
 }
 
 .outer-circle:first-child .inner-circle {
-  border-left-color: #f6671f;
+  border-left-color: #13357b;
 }
 
 @media (max-width: 767px) {
@@ -208,6 +208,27 @@ body > h1 {
 }
 
 
+@media only screen and (max-width: 768px) {
+    /* For desktop: */
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* For mobile: */
+    h3 {
+        font-size: 14px;
+    }
+    p {
+        font-size: 10px;
+    }
+}
+
+
 </style>
 
 </head>
@@ -226,11 +247,11 @@ body > h1 {
   </div>
 
   
-    <div style="display: flex; justify-content: center; align-items: center; height: 75vh; margin-top: 100px;">
-        <div style="background-color: white; height: 500px; width: 75vw;">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0; height: 15%; width: 75vw; background-color: #13357b;" href="" class="" >
-                <h3 style="color: white; margin-left: 10px; font-size: 30px;" class="m-0"><i class="fa fa-map-marker-alt me-3 " style="margin-right: 10px;"></i>Travel-Pro Logistics</h3>
-                <h5  style="color: white; margin-right: 10px; font-size: 30px">BOARDING PASS</h5>
+    <div style="display: flex; justify-content: center; align-items: center; height: 75vh; margin-top: 100px; overflow-x: auto;">
+        <div style="background-color: white; height: 500px; width: max-content;  min-width: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0; height: 15%; width: 100%; background-color: #13357b;" href="" class="" >
+                <h3 style="color: white; margin-left: 10px;" class="m-0"><i class="fa fa-map-marker-alt me-3 " style="margin-right: 10px;"></i>Travel-Pro Logistics</h3>
+                <h5  style="color: white; margin-right: 10px;">BOARDING PASS</h5>
             </div>
 
             <div style="display: flex; align-items: center;">
@@ -298,7 +319,7 @@ body > h1 {
 
 
                 <!-- left details -->
-                <div style="background-color: lightgray; width: 45%; height: 500px;">
+                <div style="background-color: lightgray; height: 500px;">
                     <div style=" display: flex; margin-left: 10px; align-items: center;">
                         <div>
                             <div>
