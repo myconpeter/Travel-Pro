@@ -1,49 +1,40 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
-const Ship = require("../models/createShipSchema");
-const Plane = require("../models/createPlaneSchema");
+const Ship = require('../models/createShipSchema');
+const Plane = require('../models/createPlaneSchema');
 
 router.post('/searchPlane', async (req, res) => {
-    const { planeTicket } = req.body;
-    try {
-        const foundPlane = await Plane.findOne({ client: planeTicket});
+	const { planeTicket } = req.body;
+	try {
+		const foundPlane = await Plane.findOne({ client: planeTicket });
 
-        if (!foundPlane) {
-            return res.redirect('/planeNotFound');
-        }
+		if (!foundPlane) {
+			return res.redirect('/planeNotFound');
+		}
 
-        return res.render('planeItemFound', { plane: foundPlane });
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Server Error');
-    }
+		return res.render('planeItemFound', { plane: foundPlane });
+	} catch (err) {
+		console.error(err);
+		res.status(500).send('Server Error');
+	}
 });
-
 
 router.post('/searchShip', async (req, res) => {
-    const { itemTicket } = req.body;
-    console.log(itemTicket)
-    console.log(req.body)
-    try {
-        const foundItem = await Ship.findOne({ client: itemTicket});
+	const { itemTicket } = req.body;
 
-        if (!foundItem) {
-            return res.redirect('/itemNotFound');
-        }
+	try {
+		const foundItem = await Ship.findOne({ client: itemTicket });
 
-        return res.render('shipFound', { item: foundItem });
-    } catch (err) {
-        console.error(err);
-        res.status(500).send('Server Error');
-    }
+		if (!foundItem) {
+			return res.redirect('/itemNotFound');
+		}
+
+		return res.render('shipFound', { item: foundItem });
+	} catch (err) {
+		console.error(err);
+		res.status(500).send('Server Error');
+	}
 });
 
-
-
-
-
-
-
-module.exports = router; 
-
+module.exports = router;
