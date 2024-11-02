@@ -78,7 +78,10 @@
                     <p class="m-0"> <span class="fw-medium">Invoice No:</span> <%= item.shipmentNo %></p>
                     <p class="m-0"> <span class="fw-medium">Invoice Date:</span> <%= item.departure %></p>
                     <p class="m-0"> <span class="fw-medium">Shipment type:</span> <%= item.shipmentType %></p>
-                    <p class="m-0"> <span class="fw-medium">Delivery Date:</span> <%= item.dueDate %></p>
+                    <p class="m-0">
+                        <span class="fw-medium">Delivery Date:</span> 
+                        <%= item.dueDate ? item.dueDate : 'Still in Transit' %>
+                    </p>
                 </div>
 
             </div>
