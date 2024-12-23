@@ -1,59 +1,51 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
-
-router.get('/', (req, res)=>{
-    res.render('index')
+router.get('/', (req, res) => {
+	res.render('index');
 });
 
-
-router.get('/about', (req, res)=>{
-    res.render('about')
+router.get('/about', (req, res) => {
+	res.render('about');
 });
 
-router.get('/contact', (req, res)=>{
-    res.render('contact')
+router.get('/contact', (req, res) => {
+	res.render('contact');
 });
 
-router.get('/services', (req, res)=>{
-    res.render('services')
+router.get('/services', (req, res) => {
+	res.render('services');
 });
 
-router.get('/shipment', (req, res)=>{
-    res.render('shipment')
+router.get('/shipment', (req, res) => {
+	res.render('shipment');
 });
 
-router.get('/404', (req, res)=>{
-    res.render('404')
+router.get('/404', (req, res) => {
+	res.render('404');
 });
 
-router.get('/itemNotFound', (req, res)=>{
-    res.render('itemNotFound')
+router.get('/itemNotFound', (req, res) => {
+	res.render('itemNotFound');
 });
 
-
-router.get('/planeNotFound', (req, res)=>{
-    res.render('planeNotFound')
+router.get('/planeNotFound', (req, res) => {
+	res.render('planeNotFound');
 });
-router.get('/shipFound', (req, res)=>{
-    res.render('shipFound')
+router.get('/shipFound', (req, res) => {
+	res.render('shipFound');
 });
 
-router.get('/searchShip', (req,res)=>{
-    res.redirect('/shipment')
-})
+router.get('/searchShip', (req, res) => {
+	res.redirect('/shipment');
+});
 
-router.get('/searchPlane', (req,res)=>{
-    res.redirect('/')
-})
+router.get('/searchPlane', (req, res) => {
+	res.redirect('/');
+});
 
+router.get('/success', (req, res) => {
+	res.render('success');
+});
 
-
-
-
-
-
-    
-    
-    
-module.exports = router; 
+module.exports = router;

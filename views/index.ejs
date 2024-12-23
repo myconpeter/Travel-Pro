@@ -314,44 +314,84 @@
                     <div class="col-lg-6">
                         <h1 class="text-white mb-3">Book A <span class="text-warning">Flight</span> Today </h1>
                         <p class="text-white mb-4">Get <span class="text-warning"></span> On Your First Adventure Trip With Travel-Pro. Get More Deal Offers Here.</p>
-                        <form>
+
+                        <!-- Book a flight today -->
+                        <!-- Book a flight today -->
+                        <!-- Book a flight today -->
+                        <!-- Book a flight today -->
+                        <!-- Book a flight today -->
+
+
+                        <form id="bookForm" action="/book" method="post">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-white border-0" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control bg-white border-0" id="name" name="firstName" placeholder="Your First Name">
+                                        <label for="name">Your First Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-white border-0" id="email" placeholder="Your Email">
+                                        <input type="text" class="form-control bg-white border-0" id="name" name="lastName" placeholder="Your Last Name">
+                                        <label for="name">Your Last Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control bg-white border-0" id="email" name="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-white border-0" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
+                                        <input type="date" class="form-control bg-white border-0" name="date" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <label for="date">Date</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating date" id="date3" data-target-input="nearest">
+                                        <input type="time" name="time" class="form-control bg-white border-0" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                        <label for="time">Time</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-white border-0" id="name" placeholder="Your Destination">
+                                        <input type="text" name="from" class="form-control bg-white border-0" id="name" placeholder="Your Destination">
+                                        <label for="name">From</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" name="to" class="form-control bg-white border-0" id="name" placeholder="Your Destination">
                                         <label for="name">Your Destination</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-white border-0" id="name" placeholder="Traveler">
+                                        <input type="text" name="travellerName" class="form-control bg-white border-0" id="name" placeholder="Traveler">
                                         <label for="name">Traveler</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select bg-white border-0" name="ticketClass" id="CategoriesSelect">
+                                            
+                                            <option value="Economy">Economy Class</option>
+                                            <option value="Business">Business Class</option>
+                                            <option value="First">First Class</option>
+                                           
+                                        </select>
+                                        <label for="CategoriesSelect">Class</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-white border-0" id="CategoriesSelect">
-                                            <option value="1">Kids</option>
-                                            <option value="2">Men</option>
-                                            <option value="3">Women</option>
+                                        <select class="form-select bg-white border-0" name="category" id="CategoriesSelect">
+                                            <option value="kid">Kids</option>
+                                            <option value="man">Men</option>
+                                            <option value="woman">Women</option>
                                            
                                         </select>
                                         <label for="CategoriesSelect">Categories</label>
@@ -359,7 +399,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-white border-0" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control bg-white border-0" name="request" placeholder="Special Request" id="message" style="height: 100px"></textarea>
                                         <label for="message">Special Request</label>
                                     </div>
                                 </div>
